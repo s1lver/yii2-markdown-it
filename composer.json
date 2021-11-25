@@ -1,0 +1,7 @@
+{
+  "name": "s1lver/yii2-markdown-it",
+  "type": "library",
+  "require": {
+    "php": "^8.0|^8.1"
+  }
+}
