@@ -1,6 +1,7 @@
 {
   "name": "s1lver/yii2-markdown-it",
   "type": "yii2-extension",
+  "minimum-stability": "stable",
   "require": {
     "php": "^8.0|^8.1"
   },
