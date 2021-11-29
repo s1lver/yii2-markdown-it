@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\widgets\InputWidget;
 
 /**
- * @package app\components\markdown
+ * @package s1lver\widgets
  */
 class MarkdownIt extends InputWidget {
 	public array $buttons = [];
