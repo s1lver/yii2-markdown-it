@@ -3,20 +3,20 @@
   "type": "yii2-extension",
   "minimum-stability": "stable",
   "require": {
-    "php": "^8.0|^8.1"
+    "php": "^8.0|^8.1",
+    "yiisoft/yii2": "^2.0.43"
   },
   "require-dev": {
-    "yiisoft/yii2": "^2.0.43"
   },
   "autoload": {
     "psr-4": {
       "s1lver\\widgets\\": "src"
     }
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://assets-packagist.org"
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
     }
-  ]
+  }
 }
