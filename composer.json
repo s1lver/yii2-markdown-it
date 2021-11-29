@@ -1,7 +1,21 @@
 {
   "name": "s1lver/yii2-markdown-it",
-  "type": "library",
+  "type": "yii2-extension",
   "require": {
     "php": "^8.0|^8.1"
-  }
+  },
+  "require-dev": {
+    "yiisoft/yii2": "^2.0.43"
+  },
+  "autoload": {
+    "psr-4": {
+      "s1lver\\widgets\\": "src"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://assets-packagist.org"
+    }
+  ]
 }
