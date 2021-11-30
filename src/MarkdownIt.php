@@ -26,10 +26,17 @@ class MarkdownIt extends InputWidget
         $this->renderButton();
 
         echo Html::endTag('div');
+
         echo Html::beginTag('div', ['class' => 'panel-content']);
         echo Html::textarea('markdown-content', '', ['id' => 'markdown-content', 'class' => 'form-control', 'rows' => 5]);
         echo Html::tag('section', '', ['id' => 'markdown-output']);
         echo Html::endTag('div');
+
+        echo Html::beginTag('div', ['class' => 'panel-footer']);
+        echo Html::button('Text', ['class' => 'btn btn-sm', 'id' => 'markdown-btn-text']);
+        echo Html::button('Visual', ['class' => 'btn btn-sm', 'id' => 'markdown-btn-visual']);
+        echo Html::endTag('div');
+
         echo Html::endTag('div');
 
         parent::init();
