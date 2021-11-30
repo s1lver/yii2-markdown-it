@@ -5,16 +5,16 @@ let md = window.markdownit();
 
 /**
  * Find button and bind action
- * @type {NodeListOf<Element>}
  */
-let buttons = document.querySelectorAll('#markdown-container button');
-buttons.forEach(function(item) {
+document.querySelectorAll('#markdown-container button').forEach(function(item) {
     let buttonKey = item.getAttribute('data-button');
     let actionBefore = item.getAttribute('data-before');
     let actionAfter = item.getAttribute('data-after');
-    $('#markdown-container').find('[data-button=' + buttonKey + ']').on('click', function() {
-        getTextAreaSelection('markdown-content').setSelectedText(actionBefore, actionAfter);
-    });
+    document.querySelectorAll('#markdown-container [data-button="' + buttonKey + '"]').forEach(function (element) {
+        element.addEventListener('click', function() {
+            getTextAreaSelection('markdown-content').setSelectedText(actionBefore, actionAfter);
+        });
+    })
 });
 
 document.getElementById('markdown-btn-visual').addEventListener('click', function() {
@@ -38,7 +38,7 @@ document.getElementById('markdown-btn-text').addEventListener('click', function(
  * An array of object instances
  * @type {Array}
  */
-var TextAreaSelectionObjects = [];
+let TextAreaSelectionObjects = [];
 /**
  * The core to obtain a copy of the object
  * @param id
