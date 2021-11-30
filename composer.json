@@ -4,7 +4,8 @@
   "minimum-stability": "stable",
   "require": {
     "php": "^8.0|^8.1",
-    "yiisoft/yii2": "^2.0.43"
+    "yiisoft/yii2": "^2.0.43",
+    "bower-asset/markdown-it": "@stable"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
