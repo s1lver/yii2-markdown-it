@@ -18,11 +18,21 @@ buttons.forEach(function(item) {
 });
 
 document.getElementById('markdown-btn-visual').addEventListener('click', function() {
-    let html = md.render(document.querySelector('#markdown-content').value.replace(/\t/gi, ''));
-    document.querySelector('#markdown-output').innerHTML = html;
+    let textarea = document.querySelector('#markdown-content');
+    let html = md.render(textarea.value.replace(/\t/gi, ''));
+    let output = document.querySelector('#markdown-output');
+    output.style.height = textarea.offsetHeight + 'px';
+    output.style.display = "";
+    output.innerHTML = html;
+    textarea.style.display = "none";
 });
 
-document.getElementById('markdown-btn-text').addEventListener('click', function(){});
+document.getElementById('markdown-btn-text').addEventListener('click', function(){
+    let textarea = document.querySelector('#markdown-content');
+    textarea.style.display = "";
+    let output = document.querySelector('#markdown-output');
+    output.style.display = "none";
+});
 
 /**
  * An array of object instances

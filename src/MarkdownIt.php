@@ -29,7 +29,7 @@ class MarkdownIt extends InputWidget
 
         echo Html::beginTag('div', ['class' => 'panel-content']);
         echo Html::textarea('markdown-content', '', ['id' => 'markdown-content', 'class' => 'form-control', 'rows' => 5]);
-        echo Html::tag('section', '', ['id' => 'markdown-output']);
+        echo Html::tag('section', '', ['id' => 'markdown-output', 'style' => ['padding' => '15px', 'display' => 'none']]);
         echo Html::endTag('div');
 
         echo Html::beginTag('div', ['class' => 'panel-footer']);
