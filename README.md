@@ -1,5 +1,14 @@
 # yii2-markdown-it
 
+Minimalistic and customizable markdown editor for Yii2.
+
+## Install
+
+```
+composer require s1lver/yii2-markdown-it
+```
+
+## Example
 
 ```php
 <?= MarkdownIt::widget([
@@ -18,3 +27,7 @@
     ]
 ]) ?>
 ```
+
+## Required
+ - [Yii2](https://github.com/yiisoft/yii2)
+ - [Markdown It!](https://github.com/markdown-it/markdown-it)
