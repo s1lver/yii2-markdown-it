@@ -11,6 +11,9 @@ use yii\widgets\InputWidget;
  */
 class MarkdownIt extends InputWidget
 {
+    /**
+     * @var array $buttons
+     */
     public array $buttons = [];
 
     /**
@@ -28,13 +31,24 @@ class MarkdownIt extends InputWidget
         echo Html::endTag('div');
 
         echo Html::beginTag('div', ['class' => 'panel-content']);
-        echo Html::textarea('markdown-content', '', ['id' => 'markdown-content', 'class' => 'form-control', 'rows' => 5]);
-        echo Html::tag('section', '', ['id' => 'markdown-output', 'style' => ['padding' => '15px', 'display' => 'none']]);
+        echo Html::textarea(
+            'markdown-content',
+            '',
+            ['id' => 'markdown-content', 'class' => 'form-control', 'rows' => 5]
+        );
+        echo Html::tag(
+            'section',
+            '',
+            ['id' => 'markdown-output', 'style' => ['padding' => '15px', 'display' => 'none']]
+        );
         echo Html::endTag('div');
 
         echo Html::beginTag('div', ['class' => 'panel-footer']);
-        echo Html::button('Text', ['class' => 'btn btn-sm', 'id' => 'markdown-btn-text']);
-        echo Html::button('Visual', ['class' => 'btn btn-sm', 'id' => 'markdown-btn-visual']);
+        echo Html::button('Text', ['class' => 'btn btn-sm', 'id' => 'markdown-btn-text', 'title' => 'Show raw text']);
+        echo Html::button(
+            'Visual',
+            ['class' => 'btn btn-sm', 'id' => 'markdown-btn-visual', 'title' => 'Render markdown to HTML',]
+        );
         echo Html::endTag('div');
 
         echo Html::endTag('div');
