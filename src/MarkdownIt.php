@@ -62,12 +62,14 @@ class MarkdownIt extends InputWidget
             $id = 0;
             foreach ($this->buttons as $button) {
                 $id ++;
-                $data = [
-                    'data-button' => $id,
-                    'data-before' => $button['buttonActions']['before']??'',
-                    'data-after' => $button['buttonActions']['after']??'',
-                ];
-                echo Html::button($button['label'], array_merge($data, $button['options']));
+                if (is_array($button) && !empty($button)) {
+                    $data = [
+                        'data-button' => $id,
+                        'data-before' => $button['buttonActions']['before']??'',
+                        'data-after' => $button['buttonActions']['after']??'',
+                    ];
+                    echo Html::button($button['label']??'', array_merge($data, $button['options']??[]));
+                }
             }
         }
     }
