@@ -3,7 +3,6 @@ declare(strict_types = 1);
 
 namespace s1lver\widgets;
 
-use app\assets\AppAsset;
 use yii\web\AssetBundle;
 
 /**
@@ -16,7 +15,6 @@ class MarkdownAsset extends AssetBundle
         'js/markdown.js'
     ];
     public $depends = [
-        AppAsset::class,
         MarkdownItAsset::class,
     ];
 }
